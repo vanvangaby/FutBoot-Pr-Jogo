@@ -1,0 +1,159 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #000000, #013c65, #00274b);
+    color: #fff;
+    scroll-behavior: smooth;
+    line-height: 1.6;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    backdrop-filter: blur(5px);
+    transition: background 0.3s ease-in-out, padding 0.3s ease-in-out;
+}
+
+header:hover {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px 20px;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-title {
+    font-size: 2.5rem;
+    color: #ffffff;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 0.3s, color 0.3s, text-shadow 0.3s;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.site-title:hover {
+    transform: scale(1.2);
+    color: #00bcd4;
+    text-shadow: 0 0 20px #00bcd4, 0 0 40px #00bcd4;
+}
+
+.login-container {
+    display: flex;
+    align-items: center;
+}
+
+.login-btn, .register-btn {
+    background: linear-gradient(135deg, #005eff, #00d4ff);
+    color: #ffffff;
+    font-size: 1rem;
+    padding: 12px 25px;
+    margin-left: 15px;
+    border-radius: 30px;
+    text-decoration: none;
+    border: none;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 0 15px rgba(0, 191, 255, 0.4);
+}
+
+.login-btn:hover, .register-btn:hover {
+    background: linear-gradient(135deg, #00d4ff, #005eff);
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(0, 191, 255, 0.7);
+}
+
+.login-btn:active, .register-btn:active {
+    transform: scale(0.95);
+    box-shadow: none;
+}
+
+.tabelas-container {
+    margin-top: 100px;
+    padding: 10px;
+    max-width: 100%;
+    display: flex; 
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: nowrap; 
+    overflow-x: auto; 
+    gap: 10px; 
+}
+
+.tabela {
+    width: 350px; 
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 5px;
+    padding: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(3px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tabela:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+th, td {
+    padding: 8px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+th {
+    background: linear-gradient(135deg, #005eff, #00274b);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+td {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+    font-size: 0.85rem;
+    transition: background 0.3s, color 0.3s;
+}
+
+table tbody tr {
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+table tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+    cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+    .tabelas-container {
+        overflow-x: auto; 
+    }
+    .tabela {
+        width: 300px; 
+    }
+}
